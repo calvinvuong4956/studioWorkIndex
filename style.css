@@ -1,0 +1,25 @@
+body {
+  background-color: #ffffff;
+  text-align: center;
+  margin: auto;
+  max-width: auto;
+}
+
+section {
+  background-color: rgb(243, 243, 243);
+  margin-top: 25px;
+  border-radius: 10px;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+h3 {
+  font-style: italic;
+}
+
+a {
+  font-style: italic;
+  font-weight: 600;
+}
