@@ -36,9 +36,11 @@ function playNote() {
 // separate attack/release functions with mouseDown/Up
 function startNote() {
   synth.triggerAttack("C1");
+  // document.body.style.backgroundColor = "blue";
 }
 function endNote() {
   synth.triggerRelease();
+    document.body.style.backgroundColor = "white";
 }
 
 playButton.addEventListener("mousedown", startNote);
