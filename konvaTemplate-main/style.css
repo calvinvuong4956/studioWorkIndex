@@ -1,0 +1,10 @@
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.stageContainer {
+  background-color: blueviolet;
+  flex: 1;
+}
