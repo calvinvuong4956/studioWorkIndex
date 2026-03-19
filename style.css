@@ -1,16 +1,73 @@
+main {
+  text-align: center;
+}
+
 body {
   background-color: #ffffff;
   text-align: center;
   margin: auto;
-  max-width: 500px;
+  max-width: 700px;
 }
 
-section {
+h1 {
+  margin-top: 30px;
+margin-bottom: 2px;
+font-size: 40px;
+}
+
+
+#name {
+  margin-top: 0px;
+  margin-bottom: 2px;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+#gh-section {
+  margin-bottom: 2.5rem;
+}
+
+#gh-section {
+font-size: 14px;
+}
+
+#id-section {
+background-color: rgba(0, 255, 34, 0.274);
+display: block;
+margin: auto;
+width: 50%;
+padding: 6px;
+margin-top: 10px;
+margin-bottom: 10px;
+border-radius: 3px;
+}
+
+#fb-section {
+background-color: rgba(255, 187, 0, 0.281);
+display: block;
+margin: auto;
+width: 50%;
+padding: 6px;
+margin-bottom: 10px;
+border-radius: 3px;
+}
+
+#m-section {
+background-color: rgba(255, 0, 0, 0.199);
+display: block;
+margin: auto;
+width: 50%;
+padding: 6px;
+margin-bottom: 55px;
+border-radius: 3px;
+}
+
+#qa-section {
   background-color: rgb(243, 243, 243);
-  margin-top: 25px;
   padding-top: 3px;
   padding-bottom: 10px;
-  padding-right: 35px;
+  padding-right: 20px;
+  padding-left: 20px;
   border-radius: 10px;
 }
 
@@ -21,9 +78,43 @@ h2 {
 .Q {
   font-style: italic;
   font-weight: bold;
+text-align: left;
+width: 100%;
+}
+
+.A {
+text-align: left;
+  width: 100%;
 }
 
 a {
   font-style: italic;
   font-weight: 600;
+}
+
+#as1-title {
+margin-top: 5rem;
+}
+
+#as1-summary {
+  margin-bottom: 2.5rem
+}
+
+.subtitle {
+  font-size: 17px;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+#proj-speculation {
+  text-align: left;
+}
+
+.paragraph {
+  margin-bottom: 3rem;
+}
+
+.AI {
+  margin-top: 2.5rem;
+font-size: 14px;
 }
