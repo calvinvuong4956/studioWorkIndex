@@ -7,7 +7,12 @@
   scale: 1.15;
   transition: scale 0.3s ease-in;
 }
+/* added hover animation to signal to users that the button does something */
+/* decided on scale-up animation because it entices and encourages users to click the button */
+
 #play-button:active {
   width: 30rem;
   transition: width 1000ms;
 }
+/* different animation for pressing/holding click function for responsive feedback to users
+that the button is indeed being pressed and the action is working as intended. */
