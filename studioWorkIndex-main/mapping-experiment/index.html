@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konva Tutorials!</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="mappingstyle.css" />
+    <script src="mapping.js" defer></script>
+    <script src="https://unpkg.com/konva@10/konva.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="toolbar">
+        <button id="circle-button">Draw New Circle</button>
+
+        <fieldset>
+          <legend>Select a Circle Colour</legend>
+
+          <div>
+            <input
+              type="radio"
+              id="change-orange"
+              name="colourSelect"
+              value="orange"
+              checked
+            />
+            <label for="change-orange">Orange</label>
+          </div>
+
+          <div>
+            <input
+              type="radio"
+              id="change-red"
+              name="colourSelect"
+              value="red"
+            />
+            <label for="change-red">Red</label>
+          </div>
+
+          <div>
+            <input
+              type="radio"
+              id="change-blue"
+              name="colourSelect"
+              value="blue"
+            />
+            <label for="change-blue">Blue</label>
+          </div>
+        </fieldset>
+
+        <label for="change-name">Type Colour</label>
+
+        <input
+          type="text"
+          id="change-name"
+          name="nameSelect"
+          required
+          minlength="0"
+          maxlength="10"
+          size="10"
+        />
+      </div>
+      <div class="stageContainer" id="stage-container">
+        <div id="konva-stage"></div>
+      </div>
+    </main>
+  </body>
+</html>
