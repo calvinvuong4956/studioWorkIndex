@@ -19,6 +19,8 @@
 
   --border: solid 2px var(--col04);
 }
+/* Colours and border dimensions were altered to switch up the vibe a little bit; now it feels more clubby
+Purple and blue were used because the mesh together well */
 
 body {
   font-family: "Work Sans", serif;
