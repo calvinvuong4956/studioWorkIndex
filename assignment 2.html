@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 1: Proj. Speculation</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="header">
+      <div class="left">
+        <a class="header-link" href="./assignment1.html">[ As1 ]</a>
+      </div>
+      <div class="center">
+        <a class="header-link" href="./index.html">[ Back to Index ]</a>
+      </div>
+      <div class="right"></div>
+    </section>
+
+    <h1 class="as-titles">Assignment 2: Prototype</h1>
+
+    <main>
+      <section id="links">
+        <section id="pr-section">
+          <a href="https://studioworkproject.netlify.app/" target="_blank"
+            >Crop-llage Prototype</a
+          >
+        </section>
+
+        <section id="form-section">
+          <a href="https://forms.office.com/r/d3e08b6g68" target="_blank"
+            >Peer User Test Form</a
+          >
+        </section>
+      </section>
+
+      <section class="documentation">
+        <p class="subtitle">Conceptual Response to Project Brief</p>
+        <div class="paragraph">
+          Looking back on Assignment 1, I initially focused on the crop function
+          as the primary creative context guiding my creative tool. As
+          development progressed, the concept of collage-ing emerged when
+          analysing image manipulation functions
+          <i>(i.e. re-arrangement and re-orientation)</i>. At this point, my
+          vision evolved to a creative tool based on cropping and collage-ing.
+          <br /><br />
+
+          Next was thinking about what features to implement and in a way that,
+          one: satisfies an interaction design principle, and two: is novel.
+          <br /><br />
+
+          Novelty was definitely the hardest condition to accomplish, especially
+          with my creative context of cropping and collage-ing, where their
+          functions are inherently very basic. In addition, my worth and purpose
+          of <i>“satisfaction”</i> and <i>“intuitiveness”</i> further restricts
+          creativity and novelty, because <i>“creativity”</i> is closely related
+          to <i>“chaos”</i> or <i>“disorder,”</i> which are complete opposites
+          of my values! <br /><br />
+
+          I tried brainstorming novelty within the interaction design
+          principles, for example: <br />
+
+          <ul>
+            <li>
+              <b>Feedback</b>: applying little size-scaling animation to a
+              cropped image where it seems like it “pops out” of the original
+              image, or a sound-effect is played when a crop action is
+              performed. The problem with these two is that the sound-effect
+              feedback is not novel at all, and with the size-scaling animation,
+              though it is fairly novel, I felt that the code required exceeded
+              my skillset.
+            </li>
+            <br />
+            <li>
+              <b>Mapping</b>: have keybinds for actions such as copy&paste,
+              deleting cropped images, or cropping images. The same problem
+              arose that keybinds are not a novel feature.
+            </li>
+          </ul>
+
+          <br />
+          And lastly, <b>Information Design</b>: The aesthetical way that
+          information is portrayed. It was in this design principle that I
+          achieved <u><b>novelty</b></u> <br /><br />
+
+          My vision for my creative tool was something that could
+          <i>“crop and re-arrange images.”</i> The thought-process I had was:
+          <br />
+          <ul id="thought-process">
+            <li class="list-arrow">
+              When a crop is made, where does the cropped image go?
+            </li>
+            <li class="list-arrow">
+              Does the original image just disappear, leaving only the cropped
+              image on the canvas?
+            </li>
+            <li class="list-arrow">
+              But just having a cropper function is quite boring. How about we
+              combine collage-ing and make it so you can crop and collage!
+            </li>
+            <li class="list-arrow">How would I display this?</li>
+            <li class="list-arrow">
+              I would like users to have the ability to quickly, and easily,
+              crop and collage at the same time, keeping the number of actions
+              low.
+            </li>
+            <li class="list-arrow">
+              How about… putting both functions on one screen! And have them be
+              differentiated by being in separate sections!
+            </li>
+          </ul>
+          As a result, the vision of the cropper-collage… CROP-LLAGE interface
+          was materialised. The functions are separated as their own sections,
+          the left being the crop area, and the right being the collage. When
+          executing a crop, the resulting cropped image would immediately appear
+          in the collage area, allowing for instant shift-of-focus from one
+          concept to the other.
+        </div>
+
+        <p class="subtitle">Technical Approach</p>
+        <div class="paragraph">
+          Two external libraries run my creative tool, each having their own
+          respective section.
+          <br /><br />
+
+          The left section, responsible for the cropping function, is executed
+          by <i>“cropper.js”</i>
+          <a href="https://fengyuanchen.github.io/cropperjs/"
+            >(https://fengyuanchen.github.io/cropperjs/)</a
+          >. Cropper.js handles:
+          <ul>
+            <li>Displaying the imported image</li>
+            <li>Interactive crop area and preview <i>(drag, resize)</i></li>
+            <li>The different shape crops</li>
+          </ul>
+          The right section, responsible for the collage function, is executed
+          by <i>“Konva.js”</i>
+          <a href="https://konvajs.org/">(https://konvajs.org/)</a>. Konva
+          handles:
+          <ul>
+            <li>Drag-drop of cropped images</li>
+            <li>
+              Resizing and rotating of cropped images via transformer anchor
+              points
+            </li>
+            <li>Layering of images</li>
+            <li>Selecting/deselecting images</li>
+            <li>The canvas which is being exported</li>
+          </ul>
+          The crop-button is the bridge which connects the two libraries,
+          allowing them to communicate and work with each other.
+        </div>
+
+        <p class="subtitle">Peer User Test Reflection</p>
+        <div class="paragraph">
+          Reflecting on the responses I received from my “Peer User Prototype
+          Test” form, there were a number of questions that bore answers that
+          were more or less similar, or answers that I expected. These included:
+          <br /><br />
+          <i><b>Question 2: Purpose of the shape icons</b></i>
+          <br /><b>Most answered: “Select crop shape”</b> <br />This tells me
+          that the information design of the icons are clear enough for
+          first-time users to understand its purpose without the need of extra
+          guidance <i>(e.g. pop-up instructions or labels)</i>, and reassures me
+          that if I were to add a new shape icon to the group, users would
+          understand its purpose. <br /><br />
+
+          <i
+            ><b
+              >Question 5 & 7: Out of 10, how intuitive were the controls and
+              how satisfied did you feel when using my creative tool?</b
+            ></i
+          >
+          <br />
+          <b>Most answered (average): “8”</b>
+          <br />This is comforting to see as my worth and purpose was to
+          “provide users a smooth, satisfying and engaging experience.” It gives
+          affirmation that I'm going down my desired path with this creative
+          tool. <br /><br />
+
+          There were also some questions that harbored interesting responses.
+          These responses provided great insight into improving my creative
+          tool, especially: <br /><br />
+
+          <i
+            ><b
+              ><div id="Q10">
+                Question 10: Are there any features that people would like to
+                see implemented?
+              </div></b
+            ></i
+          >
+          <br />
+          My creative tool had 3 hidden keybinds that were linked to actions
+          such as ctrl c&v to copy and paste, and in Question 8 where I asked
+          how many of these 3 did people successfully use, the majority either
+          said they used only 1 or none at all.
+          <br /><br />
+          A possible reason for this unknowing might be due to the perception
+          that the creative tool is a prototype, hence is unexpected for any
+          mapping element to be implemented, unless it is directly told to the
+          users via instructions.
+          <br /><br />
+          Another reason could be the limited testing time provided, where both
+          these reasons lead to the thought of keybinds existing, as
+          implausible.
+          <br /><br />
+          So following onto Question 10 where I asked if there were any features
+          that people wanted to see be implemented, many answers said that a
+          guide or manual which displays the keybinds would be helpful. I agree
+          with them and I plan to add some text at the bottom which displays
+          those keybinds.
+          <br /><br /><br />
+          There was a response that caught my eye, suggesting the implementation
+          of an image layering system, to help with easier collaging. I am very
+          keen on developing this system, though it does seem a bit too
+          ambitious for the current scope of this assignment. It might have to
+          be something I work on my own time, but for the time being, I will
+          keep note of this fantastic idea.
+          <br /><br />
+          Other responses focused on the collage-creative aspect, suggesting to
+          add stickers, filters, background/border-colour options, or more
+          variety of shapes.
+          <br /><br />
+          Although they are very great ideas, I am still focusing on the
+          “quality-of-life” side of things, such as access to more controls or
+          adding a keybind guide (list of future plans can be found under
+          <i>Project Timeline</i> below). Once that is well progressed, then
+          will I consider developing more of the creative side.
+        </div>
+
+        <p class="subtitle">Project Timeline</p>
+        <div class="paragraph">
+          Week 1-2: Started thinking of what creative concept to base my
+          creative tool of
+          <br />
+          Week 3-4: Worked on Project Speculation
+          <br />
+          Week 4-5: Watched tutorials on Konva and explored possible features in
+          class
+          <br />
+          Week 6: Developing Prototype
+          <br />
+          Week 7: Developing Prototype and submission for Peer User Testing and
+          Assignment 2
+          <br /><br /><br />
+
+          Minor deviations from initial plans
+          <ul>
+            <li>
+              Opted to not provide a default image when loading into the page
+            </li>
+            <li>
+              Implemented square/rectangle and circle/ellipses crop shapes.
+              Decided not to implement triangle, hexagon and star shapes as it
+              proved too difficul
+            </li>
+            <li>Opted to not implement custom shape feature</li>
+            <li>
+              Opted to not implement mouse stencil crop feature
+              <i
+                >(the crop shape accommodates the mouse cursor and executes crop
+                action when clicking on the image)</i
+              >
+            </li>
+            <li>Opted to not sound effect feedback to crop action</li>
+            <li>
+              Have not implemented “flip” transform feature
+              <i>(may implement in the future)</i>
+            </li>
+          </ul>
+          <br />
+          Future plans:
+          <ul>
+            <li>Add keybind-manual near the bottom of the page</li>
+            <li>
+              Implement Random-positioning of cropped images when copy-pasted,
+              instead of duplicates being pasted in the same position. May make
+              the creative tool feel more fun and playful.
+            </li>
+            <li>
+              Fix positioning of right panel, before “crop image” and “download
+              image” buttons appear, to make it be on the same y-level as the
+              left panel
+            </li>
+            <li>Add clear canvas button</li>
+            <li>
+              Make the default crop preview smaller when image is first imported
+              <i
+                >(so users can more easily create their own crop dimensions
+                without having the default crop preview obstruct their mouse)</i
+              >
+            </li>
+            <li>“Center crop preview” button</li>
+            <li>
+              Change the way to move around the crop preview
+              <i
+                >(click and hold right click within the crop preview to move
+                around)</i
+              >
+            </li>
+            <li>
+              Have cropped image anchors points be visible even if cropped image
+              is outside the canvas border
+            </li>
+            <li>Crop-llage font change?</li>
+            <li>Cropped-image layer interface? (like photoshop?)</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="AI">
+        <p class="subtitle">AI Acknowledgment</p>
+        <i>
+          AI (Claude) was used in fixing code regarding webpage structure and
+          style, and for assisting in the development of Crop-llage
+          Prototype.</i
+        >
+      </section>
+    </main>
+  </body>
+</html>

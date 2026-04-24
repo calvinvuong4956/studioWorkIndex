@@ -1,11 +1,11 @@
 {
   "folders": [
-	{
-		"path": "."
-	},
-	{
-		"path": "../../Desktop/informationDesignExperiment"
-	}
-],
-  "settings": {}
+    {
+      "path": ".",
+    },
+    {
+      "path": "../../Desktop/informationDesignExperiment",
+    },
+  ],
+  "settings": {},
 }
